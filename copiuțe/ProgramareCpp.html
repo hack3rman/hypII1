@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<head>
+  <title> Copiuță Tehnologii Web </title>
+  <link rel="stylesheet" type="text/css" href="../resurse/css/ProgramareWeb.css">
+</head>
+<body>
+  <div id="wrapper">
+
+    <div class="cutie">
+      <p> 
+          Static
+      </p>
+      <b>Variabile</b><br>
+      Variabile alocate pe durata programului (diferit de alocarea locală pentru fecare funcție/bloc)<br>
+      <b>Variabile membre (din clasă)</b><br>
+      Variabile alocate clasei (nu obiectului). Variabila static este acesată de toate obiectele clasei.<br>
+      
+      <p>
+        
+      </p>
+    </div>
+
+    <div class="cutie">
+      <p>
+        Clase
+      </p>
+      <p>
+        class A{<br>
+        &ensp;public: //in+out<br>
+        &emsp;    A(){//constructor}<br>
+        &emsp;    A(int a){//constructor+arg}<br>
+        &emsp;    ~A(){//destructor}<br>
+        &ensp;protected: //in+deriv<br>
+        &ensp;private: //in };<br>
+        <br>
+        class B: private A{ //moștenire <br>
+          &ensp;public: //in+out<br>
+          &emsp;    B(){//constructor}<br>
+          &emsp;    B(int a, int b) : A(int a)<br>
+          &emsp;&ensp;{//moștenire constructor și arg}<br>
+          &emsp;    void funcție(); //declarare};<br><br>
+        void B::funcțe(){...} //definiție externă
+      </p>
+    </div>
+    <div class="cutie">
+      <p> 
+          Modificatori de access
+      </p>
+      <p>
+        Modificatorul cu permisiile cele mai scazute rămâne. PRIV = null.
+      </p>
+    </div>
+
+    <div class="cutie">
+      <p>
+        Virtual
+        </p>
+      <p>
+        <b>Clase</b><br>
+          class B : public virtual A<br>
+          class C : public virtual A<br>
+          class D : public B, public C{<br>
+          &ensp;//se evită apelarea constructorului A de 2 ori};<br>
+        </p>
+          <p>  
+          <b>Funcții (polimorfism)</b><br>
+          //non-polimorf<br>
+          class A{ void pr(){cout&lt;&lt;x;}}<br>
+          class B: pub A { void pr() {cout&lt;&lt;x;} }<br>
+          {A a; B b; B *p=&amp;b;p.br()//print din A}<br><br>
+          //polimorf<br>
+          class A{virtual void pr(){cout&lt;&lt;x;}}<br>
+          class B: pub A { void pr() {cout&lt;&lt;x;} }<br>
+          {A a; B b; B *p=&amp;b;p.pr()//print din B}<br><br>
+          //funcție pur virtuală/abstractă<br>
+          class A{ virtual void pr() = 0; }
+      </p>
+    </div>
+
+    <div class="cutie">
+      <p> 
+          Supraîncărcare
+      </p>
+      <p>
+        <b>Unar</b><br>
+        class A{<br>
+        &ensp;  int i;<br>
+        &ensp;  A operator++();<br>
+        &ensp;  friend A operator--(A&); };<br>
+        A A::operator-(){i++;}<br>
+        A operator-(A &ob){ob.i--;}<br><br>
+        <b>Binar</b><br>
+        class A{<br>
+          &ensp;  int i,j;<br>
+          &ensp;  A operator+(A);<br>
+          &ensp;  friend A operator-(A, A); };<br>
+          A A::operator+(A ob){A obr;obr.i = i + ob.i; ret obr}<br>
+          A operator-(A ob1, A ob2){A obr; obr.i = ob1.i + ob2.i; ret obr}<br><br>
+      </p>
+    </div>
+
+    <div class="cutie">
+      <p> 
+          Fluxuri II
+      </p>
+      <p>
+        <b>&lt;iomanip&gt;</b><br>
+        cout &lt;&lt; setfill('_') &lt;&lt; setw(10);<br>
+        cout &lt;&lt; setprecision(5);<br>
+        <b>&lt;fstream&gt;</b><br>
+        ofstream fiso("fis.txt");<br>
+        fiso << "str1 str2";<br>
+        <br>
+        ofstream fisi("fis.txt");<br>
+        fis1 >> s1 >> s2;<br>
+      </p>
+    </div>
+
+    <div class="cutie">
+      <p> 
+          Excepții
+      </p>
+      <p>
+        try {<br>
+        &ensp; throw(char *) "string"; throw 1;}<br>
+        catch(char * str) {cout&lt;&lt;str;}<br>
+        catch (int x) {}<br>
+        catch(...){//implicit}<br>
+      </p>
+    </div>
+
+    <div class="cutie">
+      <p> 
+          Template
+      </p>
+      <p>
+        <b>Funcție</b><br>
+        template &lt;class tip&gt; tip nume_fct(tip p_var)<br>
+        &ensp;{tip var; ret p_var}<br><br>
+        nume_fct&lt;int&gt;(1);<br>
+        <b>Clasă</b><br>
+        template  &lt;class tip&gt; class nume_cl{<br>
+          &ensp;  tip nume_fct(tip x, tip y); }; <br><br>
+        
+        nume_cl&lt;int&gt; cx; cx.nume_fct(1,2);
+      </p>
+    </div>
+
+    <div class="cutie">
+      <p> 
+          Vectori
+      </p>
+      <p>
+        vector &lt;tip&gt; nume_v;<br>
+        vector &lt;tip&gt; nume_fct(){return nume_v;} <br>
+        vector &lt;tip&gt;::iterator it;<br>
+        it = nume_v.begin();<br>
+        nume_v.push_back(1);<br>
+        it = nume_v.end();
+      </p>
+    </div>
+
+  </div>
+
+</body>

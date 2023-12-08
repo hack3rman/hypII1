@@ -1,0 +1,42 @@
+#conținut {
+  max-width: 800px;
+}
+
+table {
+  min-width: 400px;
+}
+
+table, th, td {
+  border: solid black 2px;
+  border-collapse: collapse;
+}
+
+td {
+  border: solid black 1px;
+  border-collapse: collapse;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#form_selecție{
+  margin-bottom: 5px;
+}
+
+.modifică_tabela, .div_tabelă {
+  display: inline-block;
+  width: 49%;
+}
+
+#modifică_tabela_elevi, #modifică_tabela_note {
+  float: right;
+  top: 36px;
+  position: relative;
+}
+
+#modifică_tabela_note {
+  top: 63px;
+}
+
+.bloc {
+  min-height: 230px;
+}

@@ -1,0 +1,56 @@
+@media print{
+  @page {
+    size: a5;
+  }
+
+  iframe {
+    border: none;
+    height: 210mm !important;
+  }
+
+  .exclude_print {
+    display: none !important;
+  }
+}
+
+#titlu {
+  text-align: center;
+}
+#meniu {
+  background-color: #10706010;
+  float: left;
+  display: block;
+  width: 100px;
+} 
+
+#meniu>a{
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  color: black;
+  margin: 5px;
+}
+
+#meniu>a:hover {
+  background-color: #10706010;
+}
+
+#conținut{
+  top: 20px;
+  left: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+#conținut a{
+  display: block;	
+}
+
+iframe {
+  height: 100mm;
+  width: 160mm;
+}
+
+h3, h4 {
+  background-color: #10706010;
+}

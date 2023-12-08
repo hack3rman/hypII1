@@ -1,0 +1,68 @@
+@media print {
+  .cutie>p, table>* {
+    background-color: #ffffffff !important;
+  }
+
+  .cutie>p:first-child {
+    background-color: #10703010 !important;
+  }
+
+}
+
+@page {
+  size: A5;
+}
+
+.umbră {
+  background-color: #00000010;
+}
+
+#wrapper {
+  column-count: 3;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12px;
+  height: 210mm;
+  width: 148.5mm;
+  
+}
+
+#wrapper > div{
+  size: 33%;
+  break-inside: avoid;
+  overflow: hidden; /*neclar de ce trebuie overflow*/
+}
+
+.cutie>p,table>* {
+  background-color: #10703005;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.cutie>p:nth-child(2) {
+  margin-top: 5px;
+}
+
+.cutie>p:first-child {
+  background-color: #10703010;
+  padding: 2px;
+  padding-bottom: 2px;
+}
+
+.divizor {
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2px; 
+  border: 1px; 
+  border-bottom: 1px;
+  border-style: solid;
+  border-color:limegreen;
+}
+
+td {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#modificatori tr:first-child,#modificatori tr td:first-child {
+  background-color: #009f9f20;
+}

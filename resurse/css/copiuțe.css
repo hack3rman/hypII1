@@ -1,0 +1,19 @@
+#submeniu>p {
+  display: inline;
+  border: 2px solid;
+  border-color: #10706010;
+  margin: 5px;
+  position: relative;
+  left: 30px;
+  padding: 10px;
+}
+
+#submeniu>p:nth-child(1) {
+  background-color: #10706010;
+}
+
+#submeniu>p:hover {
+  background-color: #10706010;
+  cursor: pointer;
+}
+

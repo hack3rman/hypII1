@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title> Copiuță Tehnologii Web </title>
+  <link rel="stylesheet" type="text/css" href="resurse/css/index.css">
+  <link rel="stylesheet" type="text/css" href="resurse/css/copiuțe.css">
+  <script src="resurse/js/copiuțe.js"></script>
+</head>
+<body>
+  <div id="titlu" class="exclude_print">
+    <h1> Hack the Universe!!! </h1>
+    <h2> Copiuțe</h2>
+  </div>
+  <div id="meniu"  class="exclude_print">
+    <a href="index.html">Acasă</a>
+    <a href="copiuțe.html">Copiuțe</a>
+    <a href="catalog.php">Catalog</a>
+    <a href="referințe.html">Referințe</a>
+    <a href="despre.html">Despre</a>
+  </div>
+  <div id="submeniu"  class="exclude_print">
+    <p onclick="schimb_conținutul('ProgramareWeb',this)">Web</p>
+    <p onclick="schimb_conținutul('ProgramareCpp',this)">C++</p>
+    <p onclick="schimb_conținutul('BazeDeDate',this)">SQL</p>
+  </div>
+  <div id="conținut">
+    <iframe id="ramă" src="copiuțe/ProgramareWeb.html"></iframe>
+  </div>
+</body>
