@@ -1,3 +1,17 @@
+.creare_tabelă {
+  max-height: 0;
+  overflow: hidden;
+  transition-property: height;
+  transition: all 2s ease-in-out;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+h3>button:hover ~ .creare_tabelă {
+  max-height: 500px;
+  
+}
+
 #conținut {
   max-width: 800px;
 }
@@ -18,6 +32,10 @@ td {
   padding-right: 5px;
 }
 
+tr > th:first-child  {
+  width: 30px;
+}
+
 #form_selecție{
   margin-bottom: 5px;
 }
@@ -27,16 +45,21 @@ td {
   width: 49%;
 }
 
-#modifică_tabela_elevi, #modifică_tabela_note {
+.modifică_tabela > h4:first-child {
+  margin-top: 0px;
+}
+
+.modifică_tabela {
   float: right;
-  top: 36px;
+  top: 0px;
   position: relative;
 }
 
-#modifică_tabela_note {
-  top: 63px;
+.bloc {
+  min-height: 290px;
 }
 
-.bloc {
-  min-height: 230px;
+h3 > button {
+  float: right;
+  margin-right: 100px;
 }
